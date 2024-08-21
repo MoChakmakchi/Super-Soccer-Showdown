@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Soccer Showdown</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="mainContainer">
+      <h2>Super Soccer Showdown</h2>
+
+      <!-- Button to open dialog -->
+      <button id="openDialogBtn" class="top-right-button">Player stats</button>
+
+      <!-- Dialog box -->
+      <div id="myDialog" class="dialog">
+        <div class="dialog-content">
+          <span id="closeDialogBtn" class="close-btn">&times;</span>
+          <h2>Player Cards</h2>
+
+          <!-- Row for players with origin 'pokemon' -->
+          <h3>Pokemon Team</h3>
+          <div id="pokemonPlayersRow" class="row"></div>
+          <h2>VS</h2>
+          <!-- Row for other players -->
+          <h3>Star Wars Team</h3>
+          <div id="starwarsPlayersRow" class="row"></div>
+        </div>
+      </div>
+
+      <div id="canvasContainer">
+        <div class="teamController">
+          <img src="images/poke.png" alt="Team 1 Logo" class="team-logo" />
+          <button id="changePokeTeam" class="change-team-button">
+            Change Team
+          </button>
+          <h4>Change Plan:</h4>
+          <div class="strategy-radio-group">
+            <input
+              type="radio"
+              class="radio-input poke-radio"
+              id="poke-extreme-attack"
+              name="poke-plan"
+              value="extreme_attack"
+            />
+            <label for="poke-extreme-attack" class="radio-label">
+              <span>Extreme Attack</span>
+            </label>
+            <input
+              type="radio"
+              class="radio-input poke-radio"
+              id="poke-attack"
+              name="poke-plan"
+              value="attack"
+            />
+            <label for="poke-attack" class="radio-label">
+              <span>Attack</span>
+            </label>
+            <input
+              type="radio"
+              class="radio-input poke-radio"
+              id="poke-balanced"
+              name="poke-plan"
+              value="balanced"
+              checked
+            />
+            <label for="poke-balanced" class="radio-label">
+              <span>Balanced</span>
+            </label>
+            <input
+              type="radio"
+              class="radio-input poke-radio"
+              id="poke-defence"
+              name="poke-plan"
+              value="defence"
+            />
+            <label for="poke-defence" class="radio-label">
+              <span>Defence</span>
+            </label>
+            <input
+              type="radio"
+              class="radio-input poke-radio"
+              id="poke-extreme-defence"
+              name="poke-plan"
+              value="extreme_defence"
+            />
+            <label for="poke-extreme-defence" class="radio-label">
+              <span>Extreme Defence</span>
+            </label>
+          </div>
+        </div>
+        <canvas id="myCanvas"></canvas>
+        <div class="teamController">
+          <img src="images/starwars.png" alt="Team 2 Logo" class="team-logo" />
+          <button id="changeSwTeam" class="change-team-button">
+            Change Team
+          </button>
+          <h4>Change Plan:</h4>
+          <div class="strategy-radio-group">
+            <input
+              type="radio"
+              class="radio-input sw-radio"
+              id="sw-extreme-attack"
+              name="sw-plan"
+              value="extreme_attack"
+            />
+            <label for="sw-extreme-attack" class="radio-label">
+              <span>Extreme Attack</span>
+            </label>
+            <input
+              type="radio"
+              class="radio-input sw-radio"
+              id="sw-attack"
+              name="sw-plan"
+              value="attack"
+            />
+            <label for="sw-attack" class="radio-label">
+              <span>Attack</span>
+            </label>
+            <input
+              type="radio"
+              class="radio-input sw-radio"
+              id="sw-balanced"
+              name="sw-plan"
+              value="balanced"
+              checked
+            />
+            <label for="sw-balanced" class="radio-label">
+              <span>Balanced</span>
+            </label>
+            <input
+              type="radio"
+              class="radio-input sw-radio"
+              id="sw-defence"
+              name="sw-plan"
+              value="defence"
+            />
+            <label for="sw-defence" class="radio-label">
+              <span>Defence</span>
+            </label>
+            <input
+              type="radio"
+              class="radio-input sw-radio"
+              id="sw-extreme-defence"
+              name="sw-plan"
+              value="extreme_defence"
+            />
+            <label for="sw-extreme-defence" class="radio-label">
+              <span>Extreme Defence</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="score">
+        <span class="score-value">0</span>
+        <span class="score-separator">:</span>
+        <span class="score-value">0</span>
+      </div>
+    </div>
+
+    <!-- 
+          <div id="goalie">
+            <h2>Goalie</h2>
+            <div id="goalie-info"></div>
+          </div>
+          <div id="defenders">
+            <h2>Defenders</h2>
+            <div id="defenders-info"></div>
+          </div>
+          <div id="attackers">
+            <h2>Attackers</h2>
+            <div id="attackers-info"></div>
+          </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>

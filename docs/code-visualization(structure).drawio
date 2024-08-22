@@ -1,0 +1,190 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15" version="24.7.7">
+  <diagram name="Page-1" id="Omc9yhJyRv151Va9bfbX">
+    <mxGraphModel dx="5406" dy="5755" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-11" value="&lt;font style=&quot;font-size: 26px;&quot;&gt;Entities&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="555" y="-150" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Player&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ name: str&lt;br&gt;+ weight: float&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ height: float&lt;br&gt;&lt;/p&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ img_url: str&lt;/p&gt;&lt;/div&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="550" y="208.5" width="190" height="123" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-20" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Team&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ players: List[Player]&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;- _universe: UniverseEnum&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;- _lineup_strategy: StrategyEnum&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;- _goalie: Player&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;- _attackers: List[Player]&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;- _defenders: List[Player]&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ __init__(players: List[Player],&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;  &lt;/span&gt;universe: UniverseEnum&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;  &lt;/span&gt;lineup_strategy: StrategyEnum)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;- _create_lineup(): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ set_lineup_strategy(new_strategy: StrategyEnum): void&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ __eq__(other: object): bool&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&amp;nbsp;+ __hash__(): int&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;i&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;lt;&amp;lt;properties&amp;gt;&amp;gt;&lt;br&gt;&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ get_lineup_strategy: StrategyEnum&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ get_universe: UniverseEnum&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ get_goalie: Player&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ get_attackers: List[Player]&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ get_defenders: List[Player]&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="475" y="410" width="340" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-23" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-19" target="Q_ig1mM4z0zpnp1mpFyS-20">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="420" y="370" as="sourcePoint" />
+            <mxPoint x="580" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-24" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Q_ig1mM4z0zpnp1mpFyS-23">
+          <mxGeometry x="0.7111" y="2" relative="1" as="geometry">
+            <mxPoint x="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-25" value="5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Q_ig1mM4z0zpnp1mpFyS-23">
+          <mxGeometry x="-0.4667" y="-2" relative="1" as="geometry">
+            <mxPoint x="7" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-26" target="Q_ig1mM4z0zpnp1mpFyS-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-54" value="depends on&lt;div&gt;&amp;lt;&amp;lt;creates&amp;gt;&amp;gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Q_ig1mM4z0zpnp1mpFyS-53">
+          <mxGeometry x="-0.078" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-26" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt; &amp;lt;&amp;lt;generic&amp;gt;&amp;gt;&amp;lt;&amp;lt;client&amp;gt;&amp;gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;APIClient&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ BASE_URL: str&amp;nbsp;&amp;nbsp;&amp;lt;&amp;lt;static&amp;gt;&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ IMG_BASE_URL: str&amp;nbsp;&amp;nbsp;&amp;lt;&amp;lt;static&amp;gt;&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ get_random_characters(count: int = 5): List[T]&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ return_characters_as_players(count: int = 5): List[Player]&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- _fetch_random_character(retries: int = 3): T&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;i&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ _get_random_id() -&amp;gt; int&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ _map_to_player(character: T) -&amp;gt; Player&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ _is_valid_character(character: T) -&amp;gt; bool&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="150" width="260" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-27" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&amp;lt;&amp;lt;client&amp;gt;&amp;gt; &amp;lt;&amp;lt;concrete&amp;gt;&amp;gt; &amp;lt;&amp;lt;generic&amp;gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;b&gt;PokeAPIClient&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- BASE_URL: str&amp;nbsp;&amp;nbsp;&amp;lt;&amp;lt;static&amp;gt;&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- IMG_BASE_URL: str&amp;nbsp;&amp;nbsp;&amp;lt;&amp;lt;static&amp;gt;&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- _get_random_id() -&amp;gt; int&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- _map_to_player(character: PokeAPICharacter) -&amp;gt; Player&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- _is_valid_character(character: PokeAPICharacter) -&amp;gt; bool&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="45" y="530" width="330" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-28" value="Clients" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=26;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="-150" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-31" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&amp;lt;&amp;lt;client&amp;gt;&amp;gt; &amp;lt;&amp;lt;concrete&amp;gt;&amp;gt; &amp;lt;&amp;lt;generic&amp;gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;b&gt;SWAPIClient&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- BASE_URL: str&amp;nbsp;&amp;nbsp;&amp;lt;&amp;lt;static&amp;gt;&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- IMG_BASE_URL: str&amp;nbsp;&amp;nbsp;&amp;lt;&amp;lt;static&amp;gt;&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- _get_random_id() -&amp;gt; int&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- _map_to_player(character: SWAPICharacter) -&amp;gt; Player&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- _is_valid_character(character: SWAPICharacter) -&amp;gt; bool&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-355" y="530" width="330" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-34" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-31" target="Q_ig1mM4z0zpnp1mpFyS-26">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-430" y="460" as="sourcePoint" />
+            <mxPoint x="-270" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-45" value="inherits" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Q_ig1mM4z0zpnp1mpFyS-34">
+          <mxGeometry x="-0.0012" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-35" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-27" target="Q_ig1mM4z0zpnp1mpFyS-26">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-420" y="470" as="sourcePoint" />
+            <mxPoint x="20" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-46" value="inherits" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Q_ig1mM4z0zpnp1mpFyS-35">
+          <mxGeometry x="-0.0319" y="-5" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-39" value="Utils" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=26;" vertex="1" parent="1">
+          <mxGeometry x="-685" y="-150" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-40" target="Q_ig1mM4z0zpnp1mpFyS-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-595" y="940" />
+              <mxPoint x="645" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-44" value="Association &amp;lt;&amp;lt;creates&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Q_ig1mM4z0zpnp1mpFyS-41">
+          <mxGeometry x="0.2342" y="-1" relative="1" as="geometry">
+            <mxPoint x="-32" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-40" target="Q_ig1mM4z0zpnp1mpFyS-27">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-513" y="860" />
+              <mxPoint x="210" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-51" value="depends on&lt;div&gt;&amp;lt;&amp;lt;uses&amp;gt;&amp;gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Q_ig1mM4z0zpnp1mpFyS-48">
+          <mxGeometry x="-0.705" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-40" target="Q_ig1mM4z0zpnp1mpFyS-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-430" y="770" />
+              <mxPoint x="-190" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-50" value="depends on&lt;div&gt;&amp;lt;&amp;lt;uses&amp;gt;&amp;gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Q_ig1mM4z0zpnp1mpFyS-49">
+          <mxGeometry x="-0.4402" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-40" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;b&gt;TeamGenerator&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- _universe: UniverseEnum&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- _client: Union[SWAPIClient, PokeAPIClient]&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ __init__(universe: UniverseEnum)&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ generate_team(count: int = 5, lineup_strategy: StrategyEnum = StrategyEnum.balanced) -&amp;gt; Team&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;caret-color: rgba(0, 0, 0, 0); color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; white-space: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-top%3A4px%3Btext-align%3Acenter%3B%26quot%3B%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Btext-align%3A%20left%3B%26quot%3B%26gt%3B%26amp%3Blt%3B%26amp%3Blt%3Bclient%26amp%3Bgt%3B%26amp%3Bgt%3B%20%26amp%3Blt%3B%26amp%3Blt%3Bconcrete%26amp%3Bgt%3B%26amp%3Bgt%3B%20%26amp%3Blt%3B%26amp%3Blt%3Bgeneric%26amp%3Bgt%3B%26amp%3Bgt%3B%26lt%3B%2Fspan%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-top%3A4px%3Btext-align%3Acenter%3B%26quot%3B%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Btext-align%3A%20left%3B%26quot%3B%26gt%3B%26lt%3Bb%26gt%3BSWAPIClient%26lt%3B%2Fb%26gt%3B%26lt%3B%2Fspan%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bhr%20size%3D%26quot%3B1%26quot%3B%20style%3D%26quot%3Bborder-style%3Asolid%3B%26quot%3B%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-left%3A4px%3B%26quot%3B%26gt%3B-%20BASE_URL%3A%20str%26amp%3Bnbsp%3B%26amp%3Bnbsp%3B%26amp%3Blt%3B%26amp%3Blt%3Bstatic%26amp%3Bgt%3B%26amp%3Bgt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-left%3A4px%3B%26quot%3B%26gt%3B-%20IMG_BASE_URL%3A%20str%26amp%3Bnbsp%3B%26amp%3Bnbsp%3B%26amp%3Blt%3B%26amp%3Blt%3Bstatic%26amp%3Bgt%3B%26amp%3Bgt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bhr%20size%3D%26quot%3B1%26quot%3B%20style%3D%26quot%3Bborder-style%3Asolid%3B%26quot%3B%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A%200px%200px%200px%204px%3B%26quot%3B%26gt%3B%26lt%3Bi%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bwhite-space%3A%20pre%3B%26quot%3B%26gt%3B%26%239%3B%26lt%3B%2Fspan%26gt%3B%26amp%3Blt%3B%26amp%3Blt%3Babstract%26amp%3Bgt%3B%26amp%3Bgt%3B%26lt%3B%2Fi%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A%200px%200px%200px%204px%3B%26quot%3B%26gt%3B-%20_get_random_id()%20-%26amp%3Bgt%3B%20int%26lt%3B%2Fp%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A%200px%200px%200px%204px%3B%26quot%3B%26gt%3B-%20_map_to_player(character%3A%20SWAPICharacter)%20-%26amp%3Bgt%3B%20Player%26lt%3B%2Fp%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A%200px%200px%200px%204px%3B%26quot%3B%26gt%3B-%20_is_valid_character(character%3A%20SWAPICharacter)%20-%26amp%3Bgt%3B%20bool%26lt%3B%2Fp%26gt%3B%22%20style%3D%22verticalAlign%3Dtop%3Balign%3Dleft%3Boverflow%3Dfill%3Bhtml%3D1%3BwhiteSpace%3Dwrap%3BfillColor%3D%23dae8fc%3BstrokeColor%3D%236c8ebf%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22-355%22%20y%3D%22530%22%20width%3D%22330%22%20height%3D%22160%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="170" width="330" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-55" value="models/&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;types.py&lt;/div&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="-40" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-56" value="helpers.py&lt;div&gt;team_generator.py&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document" vertex="1" parent="1">
+          <mxGeometry x="-520" y="20" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-57" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Backend&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=175;tabHeight=50;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#bac8d3;strokeColor=#23445d;fontSize=50;" vertex="1" parent="1">
+          <mxGeometry x="-1100" y="-940" width="415" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-58" value="&lt;b&gt;main.py&lt;/b&gt;&lt;div&gt;(FastAPIs)&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document" vertex="1" parent="1">
+          <mxGeometry x="-1060" y="-150" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-60" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Frontend&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=175;tabHeight=50;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=50;" vertex="1" parent="1">
+          <mxGeometry x="-1115" y="-1430" width="415" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-61" value="src" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=175;tabHeight=50;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=36;" vertex="1" parent="1">
+          <mxGeometry x="-685" y="-530" width="310" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-57" target="Q_ig1mM4z0zpnp1mpFyS-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=415;exitDy=185;exitPerimeter=0;entryX=0;entryY=0;entryDx=175;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-57" target="Q_ig1mM4z0zpnp1mpFyS-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=40;entryDy=0;entryPerimeter=0;exitX=0.129;exitY=0.996;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-61" target="Q_ig1mM4z0zpnp1mpFyS-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=310;exitDy=250;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-61" target="Q_ig1mM4z0zpnp1mpFyS-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-80" y="-280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=310;exitDy=150;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-61" target="Q_ig1mM4z0zpnp1mpFyS-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-67" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Infrastructure&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;(IaC)&lt;/font&gt;&lt;/div&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=175;tabHeight=50;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=50;" vertex="1" parent="1">
+          <mxGeometry x="-1140" y="-1900" width="415" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-68" value="docs" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=175;tabHeight=50;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=50;" vertex="1" parent="1">
+          <mxGeometry x="-1115" y="-2130" width="415" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-69" value=".github&lt;div&gt;(ci/cd)&lt;/div&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=175;tabHeight=50;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#fad9d5;strokeColor=#ae4132;fontSize=50;" vertex="1" parent="1">
+          <mxGeometry x="-1080" y="-2370" width="415" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.976;exitY=0.716;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.002;entryY=0.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-72" target="Q_ig1mM4z0zpnp1mpFyS-74">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-183" y="-1235" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-72" value="&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;images/&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;index.html&lt;/font&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;styles.css&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;script.js&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document" vertex="1" parent="1">
+          <mxGeometry x="-520" y="-1357.5" width="170" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-60" target="Q_ig1mM4z0zpnp1mpFyS-72">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-190" y="-1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-74" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;script.js logic:&lt;/h1&gt;&lt;p&gt;1. Fetch SW &amp;amp; poke data from backend&lt;/p&gt;&lt;p&gt;2. adapt data for drawing &amp;amp; displaying&lt;br&gt;&lt;/p&gt;&lt;p&gt;3. draw canvas &amp;amp; players&lt;/p&gt;&lt;p&gt;4. populate characters &amp;amp; stats&lt;/p&gt;&lt;p&gt;- Note: loading buttons while fetching data to prevent potential issues&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-210" y="-1240" width="180" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-76" value="&lt;font style=&quot;font-size: 26px;&quot;&gt;tests&lt;/font&gt;&lt;div style=&quot;font-size: 26px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 26px;&quot;&gt;(same structure as src)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=175;tabHeight=50;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffff88;strokeColor=#36393d;fontSize=36;" vertex="1" parent="1">
+          <mxGeometry x="-1570" y="-530" width="310" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ig1mM4z0zpnp1mpFyS-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=175;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q_ig1mM4z0zpnp1mpFyS-57" target="Q_ig1mM4z0zpnp1mpFyS-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

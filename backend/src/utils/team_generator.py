@@ -8,13 +8,13 @@ from src.entities.team import Team
 
 class TeamGenerator:
     def __init__(self, universe: UniverseEnum):
-        self.universe = universe
-        self.client: Union[SWAPIClient, PokeAPIClient]
+        self._universe = universe
+        self._client: Union[SWAPIClient, PokeAPIClient]
 
-        if self.universe == UniverseEnum.SWAPI:
-            self.client = SWAPIClient()
-        elif self.universe == UniverseEnum.POKEMON:
-            self.client = PokeAPIClient()
+        if self._universe == UniverseEnum.SWAPI:
+            self._client = SWAPIClient()
+        elif self._universe == UniverseEnum.POKEMON:
+            self._client = PokeAPIClient()
         else:
             raise ValueError("Unsupported universe specified.")
 
@@ -22,7 +22,7 @@ class TeamGenerator:
         if count != 5:
             raise ValueError("A team must have exactly 5 players.")
 
-        players = self.client.return_characters_as_players(count)
+        players = self._client.return_characters_as_players(count)
 
-        team = Team(players, self.universe, lineup_strategy)
+        team = Team(players, self._universe, lineup_strategy)
         return team

@@ -1,8 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
 from src.utils.models.types import StrategyEnum, UniverseEnum
-from src.clients.pokeapi_client import PokeAPIClient
-from src.clients.swapi_client import SWAPIClient
 from src.entities.team import Team
 from src.utils.team_generator import TeamGenerator
 
@@ -17,7 +15,7 @@ class TestTeamGenerator(unittest.TestCase):
 
         # Ensure the mock client is used
         mock_client = MockSWAPIClient.return_value
-        self.assertIs(generator.client, mock_client)
+        self.assertIs(generator._client, mock_client)
 
     @patch('src.utils.team_generator.PokeAPIClient')
     def test_pokemon_client_initialization(self, MockPokeAPIClient):
@@ -27,7 +25,7 @@ class TestTeamGenerator(unittest.TestCase):
 
         # Ensure the mock client is used
         mock_client = MockPokeAPIClient.return_value
-        self.assertIs(generator.client, mock_client)
+        self.assertIs(generator._client, mock_client)
 
     @patch('src.utils.team_generator.SWAPIClient')
     def test_generate_team_swapi(self, MockSWAPIClient):
@@ -66,7 +64,7 @@ class TestTeamGenerator(unittest.TestCase):
         # Verify that the team is created correctly
         self.assertIsInstance(team, Team)
         self.assertEqual(len(team.players), 5)
-        self.assertEqual(team.universe, UniverseEnum.SWAPI)
+        self.assertEqual(team._universe, UniverseEnum.SWAPI)
 
     @patch('src.utils.team_generator.PokeAPIClient')
     def test_generate_team_pokemon(self, MockPokeAPIClient):
@@ -105,7 +103,7 @@ class TestTeamGenerator(unittest.TestCase):
         # Verify that the team is created correctly
         self.assertIsInstance(team, Team)
         self.assertEqual(len(team.players), 5)
-        self.assertEqual(team.universe, UniverseEnum.POKEMON)
+        self.assertEqual(team._universe, UniverseEnum.POKEMON)
 
     def test_generate_team_invalid_count(self):
         """Test generating a team with an invalid count."""
@@ -156,7 +154,7 @@ class TestTeamGenerator(unittest.TestCase):
                 # Verify that the team is created correctly
                 self.assertIsInstance(team, Team)
                 self.assertEqual(len(team.players), 5)
-                self.assertEqual(team.universe, UniverseEnum.SWAPI)
+                self.assertEqual(team._universe, UniverseEnum.SWAPI)
                 self.assertEqual(team.lineup_strategy, strategy)
 
     def test_unsupported_universe(self):

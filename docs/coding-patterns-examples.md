@@ -1,7 +1,9 @@
 # Examples of design principles and patterns
+- **Type safety**
+Python is strongly typed (type conversion is explicit at runtime), just not statically typed. This means that type hints are not enforced and act more as mere suggestions.
 - **Layered Architecture, Separation of Concerns, Encapsulation, Cohesion and Coupling:**
 Divides the system into layers with distinct responsibilities. I did that for example with the folder structure of having entities handling the core elements, api clients to communicate with external world, and the teamgenerator containing the actual business logic.
-- **Abstract Factory, DRY (Don't repeat yourself):**
+- **Abstract Factory, DRY (Don't repeat yourself), Polymorphism:**
 We created an abstract APIClient class, that can be inherited by different APIs that give us characters that can be converted to players.
 - **Observer:** Defines a dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
 We use this in the front end. Whenever the teams change (new teams or new plan), we have to change how the canvas is drawn, and repopulate the players.
